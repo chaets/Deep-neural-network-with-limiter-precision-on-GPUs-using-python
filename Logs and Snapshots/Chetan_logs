@@ -1,0 +1,407 @@
+chitrarth@chitrarth-PC:~$ ssh -i pa2key.pem ubuntu@ec2-34-237-2-170.compute-1.amazonaws.com
+The authenticity of host 'ec2-34-237-2-170.compute-1.amazonaws.com (34.237.2.170)' can't be established.
+ECDSA key fingerprint is SHA256:iGRI9VstLfHhi110IN/v4IKWyU8qkOOwdktOxqn7Ts0.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'ec2-34-237-2-170.compute-1.amazonaws.com,34.237.2.170' (ECDSA) to the list of known hosts.
+=============================================================================
+       __|  __|_  )
+       _|  (     /   Deep Learning AMI  (Ubuntu)
+      ___|\___|___|
+=============================================================================
+
+Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.0-1039-aws x86_64v)
+
+Please use one of the following commands to start the required environment with the framework of your choice:
+for MXNet(+Keras1) with Python3 (CUDA 9) _____________________ source activate mxnet_p36
+for MXNet(+Keras1) with Python2 (CUDA 9) _____________________ source activate mxnet_p27
+for TensorFlow(+Keras2) with Python3 (CUDA 8) ________________ source activate tensorflow_p36
+for TensorFlow(+Keras2) with Python2 (CUDA 8) ________________ source activate tensorflow_p27
+for Theano(+Keras2) with Python3 (CUDA 9) ____________________ source activate theano_p36
+for Theano(+Keras2) with Python2 (CUDA 9) ____________________ source activate theano_p27
+for PyTorch with Python3 (CUDA 8) ____________________________ source activate pytorch_p36
+for PyTorch with Python2 (CUDA 8) ____________________________ source activate pytorch_p27
+for CNTK(+Keras2) with Python3 (CUDA 8) ______________________ source activate cntk_p36
+for CNTK(+Keras2) with Python2 (CUDA 8) ______________________ source activate cntk_p27
+for Caffe2 with Python2 (CUDA 9) _____________________________ source activate caffe2_p27
+for base Python2 (CUDA 9) ____________________________________ source activate python2
+for base Python3 (CUDA 9) ____________________________________ source activate python3
+
+Official conda user guide: https://conda.io/docs/user-guide/index.html
+AMI details: https://aws.amazon.com/amazon-ai/amis/details/
+Release Notes: https://aws.amazon.com/documentation/dlami/latest/devguide/appendix-ami-release-notes.html
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+27 packages can be updated.
+0 updates are security updates.
+
+
+*** System restart required ***
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+ubuntu@ip-172-31-6-68:~$ activate tensorflow_p36
+Error: activate must be sourced. Run 'source activate envname'
+instead of 'activate envname'.
+
+ubuntu@ip-172-31-6-68:~$ source activate tensorflow_p36
+(tensorflow_p36) ubuntu@ip-172-31-6-68:~$ vi Deep_Final.py
+(tensorflow_p36) ubuntu@ip-172-31-6-68:~$ python3 Deep_Final.py 
+/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/importlib/_bootstrap.py:219: RuntimeWarning: compiletime version 3.5 of module 'tensorflow.python.framework.fast_tensor_util' does not match runtime version 3.6
+  return f(*args, **kwds)
+Successfully downloaded train-images-idx3-ubyte.gz 9912422 bytes.
+Extracting tmp/data/train-images-idx3-ubyte.gz
+Successfully downloaded train-labels-idx1-ubyte.gz 28881 bytes.
+Extracting tmp/data/train-labels-idx1-ubyte.gz
+Successfully downloaded t10k-images-idx3-ubyte.gz 1648877 bytes.
+Extracting tmp/data/t10k-images-idx3-ubyte.gz
+Successfully downloaded t10k-labels-idx1-ubyte.gz 4542 bytes.
+Extracting tmp/data/t10k-labels-idx1-ubyte.gz
+Tensor("Cast:0", shape=(784, 300), dtype=float64)
+Tensor("Cast_1:0", shape=(300,), dtype=float64)
+2017-12-05 20:16:59.180835: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2017-12-05 20:17:01.590893: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:892] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2017-12-05 20:17:01.591365: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Found device 0 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:00:1e.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2017-12-05 20:17:01.591396: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:1e.0, compute capability: 7.0)
+949478.81255 
+ 0:01:05.306732
+87.7581834793
+213517.39934 
+ 0:00:01.058995
+92.0981824398
+125190.739164 
+ 0:00:01.087155
+93.8490927219
+81756.9363905 
+ 0:00:01.054622
+95.5236375332
+54875.7835282 
+ 0:00:01.096156
+96.4618206024
+37126.1547702 
+ 0:00:01.058013
+97.2836375237
+25805.7737627 
+ 0:00:01.091022
+97.8272736073
+18193.7011455 
+ 0:00:01.056535
+98.0599999428
+13261.1964513 
+ 0:00:01.105940
+98.5290884972
+9607.80977674 
+ 0:00:01.048659
+98.6000001431
+7416.52929564 
+ 0:00:01.047414
+98.7254559994
+6361.09011659 
+ 0:00:01.091194
+98.8781809807
+5233.05800191 
+ 0:00:01.048805
+98.8981842995
+5023.76373051 
+ 0:00:01.084797
+99.1963624954
+4743.70227116 
+ 0:00:01.049639
+99.3109107018
+4457.33862596 
+ 0:00:01.087151
+99.3472754955
+3893.18968526 
+ 0:00:01.054562
+99.258184433
+3046.26732788 
+ 0:00:01.095037
+99.4509100914
+3761.59253086 
+ 0:00:01.051416
+99.274545908
+3656.24957386 
+ 0:00:01.095998
+99.3981838226
+2945.63497126 
+ 0:00:01.095016
+99.6381819248
+3312.0364368 
+ 0:00:01.043275
+99.3654549122
+2611.22596574 
+ 0:00:01.100403
+99.6272742748
+2960.41061896 
+ 0:00:01.060676
+99.2363631725
+2506.10192691 
+ 0:00:01.091710
+99.5654523373
+3137.10538069 
+ 0:00:01.066233
+99.274545908
+2333.21200405 
+ 0:00:01.096774
+99.6327280998
+2229.76795909 
+ 0:00:01.059924
+99.5854556561
+2106.68561014 
+ 0:00:01.089471
+99.596363306
+2511.96971109 
+ 0:00:01.047809
+99.6036350727
+
+
+
+
+ 95.7899987698
+(tensorflow_p36) ubuntu@ip-172-31-6-68:~$ vi Deep_Final16.py
+(tensorflow_p36) ubuntu@ip-172-31-6-68:~$ python3 Deep_Final16.py 
+/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/importlib/_bootstrap.py:219: RuntimeWarning: compiletime version 3.5 of module 'tensorflow.python.framework.fast_tensor_util' does not match runtime version 3.6
+  return f(*args, **kwds)
+Extracting tmp/data/train-images-idx3-ubyte.gz
+Extracting tmp/data/train-labels-idx1-ubyte.gz
+Extracting tmp/data/t10k-images-idx3-ubyte.gz
+Extracting tmp/data/t10k-labels-idx1-ubyte.gz
+Tensor("Variable/read:0", shape=(784, 300), dtype=float32)
+Tensor("Variable_1/read:0", shape=(300,), dtype=float32)
+2017-12-05 20:22:26.558617: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2017-12-05 20:22:26.710040: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:892] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2017-12-05 20:22:26.710501: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Found device 0 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:00:1e.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2017-12-05 20:22:26.710537: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:1e.0, compute capability: 7.0)
+1065901.59615 
+ 0:00:01.363702
+88.1327271461
+240332.107012 
+ 0:00:01.042668
+91.7745471001
+143902.984138 
+ 0:00:01.071121
+93.910908699
+96212.0325636 
+ 0:00:01.038616
+95.3563630581
+64733.1304143 
+ 0:00:01.076637
+96.0945427418
+47116.3347178 
+ 0:00:01.027170
+96.8472719193
+32225.5109304 
+ 0:00:01.075553
+97.6109087467
+23371.7781275 
+ 0:00:01.024423
+98.3145475388
+15613.1227056 
+ 0:00:01.070424
+97.9636371136
+13077.3052425 
+ 0:00:01.028271
+98.5145449638
+10046.9510312 
+ 0:00:01.079236
+98.0400025845
+8007.54507082 
+ 0:00:01.031419
+98.9945471287
+7143.31273697 
+ 0:00:01.082285
+99.0000009537
+5135.82879962 
+ 0:00:01.031293
+99.1981804371
+5650.19700478 
+ 0:00:01.041387
+99.2890894413
+4885.37048496 
+ 0:00:01.076529
+99.2436349392
+3901.46595466 
+ 0:00:01.031176
+99.3272721767
+4972.03034677 
+ 0:00:01.067679
+98.2909083366
+4682.85326007 
+ 0:00:01.020506
+99.2418169975
+3624.46808555 
+ 0:00:01.089216
+99.0345478058
+3532.3213099 
+ 0:00:01.035336
+99.401819706
+3433.89704949 
+ 0:00:01.069544
+99.5272755623
+4048.24592197 
+ 0:00:01.023478
+99.5181798935
+3352.44206488 
+ 0:00:01.063801
+99.5745480061
+2781.60776755 
+ 0:00:01.029970
+99.6381819248
+2423.15874306 
+ 0:00:01.076977
+99.5454549789
+3123.73488191 
+ 0:00:01.028072
+99.4545459747
+3268.94367962 
+ 0:00:01.043916
+99.6418178082
+2592.73117725 
+ 0:00:01.085027
+99.6399998665
+2128.4817265 
+ 0:00:01.032252
+99.5800018311
+
+
+
+
+ 95.9200024605
+(tensorflow_p36) ubuntu@ip-172-31-6-68:~$ vi Deep_Final16.py 
+(tensorflow_p36) ubuntu@ip-172-31-6-68:~$ rm Deep_Final16.py 
+(tensorflow_p36) ubuntu@ip-172-31-6-68:~$ vi Deep_Final16.py 
+(tensorflow_p36) ubuntu@ip-172-31-6-68:~$ python3 Deep_Final16.py 
+/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/importlib/_bootstrap.py:219: RuntimeWarning: compiletime version 3.5 of module 'tensorflow.python.framework.fast_tensor_util' does not match runtime version 3.6
+  return f(*args, **kwds)
+Extracting tmp/data/train-images-idx3-ubyte.gz
+Extracting tmp/data/train-labels-idx1-ubyte.gz
+Extracting tmp/data/t10k-images-idx3-ubyte.gz
+Extracting tmp/data/t10k-labels-idx1-ubyte.gz
+Tensor("Cast:0", shape=(784, 300), dtype=float16)
+Tensor("Cast_1:0", shape=(300,), dtype=float16)
+2017-12-05 20:24:56.712768: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2017-12-05 20:24:56.824420: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:892] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2017-12-05 20:24:56.824879: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Found device 0 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:00:1e.0
+totalMemory: 15.77GiB freeMemory: 15.36GiB
+2017-12-05 20:24:56.824909: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:1e.0, compute capability: 7.0)
+inf 
+ 0:00:01.433251
+88.2963657379
+224850.34375 
+ 0:00:01.166730
+92.4581825733
+131221.210938 
+ 0:00:01.129157
+94.4163620472
+84346.734375 
+ 0:00:01.122993
+95.6127285957
+57160.9101562 
+ 0:00:01.172998
+96.450906992
+38699.590088 
+ 0:00:01.140898
+97.0690906048
+26868.2471561 
+ 0:00:01.170513
+97.9072749615
+18287.7383062 
+ 0:00:01.129209
+97.9836344719
+13143.7000868 
+ 0:00:01.164093
+98.5854566097
+8830.60260344 
+ 0:00:01.159270
+98.8018155098
+7771.31481874 
+ 0:00:01.113521
+98.6181795597
+7999.30722737 
+ 0:00:01.143142
+99.1109073162
+6091.59354639 
+ 0:00:01.110145
+99.1709113121
+4409.17605782 
+ 0:00:01.150243
+99.4054555893
+4830.50715876 
+ 0:00:01.112377
+99.4818210602
+4673.622612 
+ 0:00:01.161562
+99.2127299309
+4322.80108982 
+ 0:00:01.152982
+99.4309067726
+4037.30732131 
+ 0:00:01.115357
+99.0327298641
+4086.73350096 
+ 0:00:01.159048
+99.596363306
+3116.16743815 
+ 0:00:01.110934
+99.4490921497
+3357.62574005 
+ 0:00:01.147918
+99.5636343956
+3317.4291153 
+ 0:00:01.124545
+99.5054543018
+3276.56062484 
+ 0:00:01.131488
+99.3272721767
+2636.90662485 
+ 0:00:01.160078
+99.6363639832
+3084.29449964 
+ 0:00:01.110940
+99.4454562664
+2879.18017912 
+ 0:00:01.152822
+99.7054517269
+2512.94610262 
+ 0:00:01.107853
+99.6436357498
+2464.58777666 
+ 0:00:01.152874
+99.6090888977
+2116.45935392 
+ 0:00:01.119167
+99.8363614082
+2107.02133948 
+ 0:00:01.117796
+99.6163606644
+
+
+
+
+ 95.870000124
+(tensorflow_p36) ubuntu@ip-172-31-6-68:~$ vi Deep_Final32.py
+(tensorflow_p36) ubuntu@ip-172-31-6-68:~$ 
+(tensorflow_p36) ubuntu@ip-172-31-6-68:~$ 
+(tensorflow_p36) ubuntu@ip-172-31-6-68:~$ 
+(tensorflow_p36) ubuntu@ip-172-31-6-68:~$ 
+(tensorflow_p36) ubuntu@ip-172-31-6-68:~$ 
+(tensorflow_p36) ubuntu@ip-172-31-6-68:~$ 
+
